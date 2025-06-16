@@ -1,0 +1,88 @@
+/* index */
+body {
+    background-image: url("/static/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align:center;
+}
+.title {
+    font-family: Georgia, serif;
+    background-image: url("/static/images/scroll.png");
+    background-size: 1000px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 40px 0; /* 画像の高さに合わせて調整してね */
+    color: black; /* 文字色も調整できるよ */
+}
+.menu-btn {
+font-family: Georgia, serif;
+color: white;
+padding:30px;
+}
+.menu-btn a {
+color: white;         /* 好きな色に変えてOK！ */
+text-decoration: none; /* 下線も消したいならこれ！ */
+}
+.menu-btn a:visited {
+color: white;         /* 訪問済みリンクも同じ色に */
+}
+.menu-btn a:hover {
+color: #ffd700;       /* ホバー時はギャルっぽくゴールドにしてもアゲ！ */
+}
+.menu-btn-red {
+background-image: url("/static/images/001.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.menu-btn-green {
+background-image: url("/static/images/004.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.menu-btn-blue {
+background-image: url("/static/images/005.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.menu-btn-006 {
+background-image: url("/static/images/006.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.list-area {
+    background-image: url("/static/images/bg_paper.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 500px 700px;
+}
+
+.list-area table {
+    padding-top:50px;
+    padding-bottom:50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2.0em;
+    font-family: Georgia, serif;
+}
+
+.list-area td {
+    background-color: white;
+}
+
+.transparent-btn {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #fff; /* テキスト色は背景に合わせて調整してね */
+    font-size: 2.0em; /* お好みでサイズ調整 */
+    cursor: pointer;
+    padding: 0;
+  }

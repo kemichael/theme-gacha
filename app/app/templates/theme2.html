@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>お題02登録</title>
+</head>
+<body>
+  <h2>お題02登録</h2>
+  <form method="post">
+    <textarea name="names" placeholder="お題02を改行で複数入力できるよ！" rows="5"></textarea>
+    <button type="submit">追加</button>
+  </form>
+  <ul>
+    {% for theme in themes %}
+      <li>{{ theme.name }} <a href="{{ url_for('delete_theme2_view', theme_id=theme.id) }}">削除</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('index') }}">戻る</a>
+</body>
+</html>
