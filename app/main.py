@@ -9,7 +9,7 @@ def create_app():
     app = Flask(
         __name__,
         template_folder="app/templates",
-        static_folder="app/static"
+        static_folder="static"
     )
     init_db(app)
 
