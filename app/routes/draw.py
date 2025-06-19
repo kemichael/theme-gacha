@@ -6,10 +6,14 @@ import random
 bp = Blueprint('draw', __name__, url_prefix='/draw')
 
 @bp.route('', methods=['POST'])
+
+# draw 抽選ロジック
 def draw():
+    # データ取得
     teams = Team.query.all()
     theme1s = Theme1.query.all()
     theme2s = Theme2.query.all()
+
     if not teams or not theme1s or not theme2s:
         return jsonify({"error": "データが足りないよ！"}), 400
 

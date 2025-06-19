@@ -25,6 +25,8 @@ def add_team():
         return jsonify(team_schema(team)), 201
 
 @bp.route('/<int:team_id>', methods=['DELETE'])
+
+# remove_team 物理削除
 def remove_team(team_id):
     if delete_team(team_id):
         return jsonify({"result": "ok"})

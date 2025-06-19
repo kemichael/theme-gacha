@@ -6,24 +6,23 @@ from app.routes.theme2 import bp as theme2_bp
 from app.routes.draw import bp as draw_bp
 
 def create_app():
+    # Flaskアプリケーションのインスタンスを作成
     app = Flask(
         __name__,
-        template_folder="app/templates",
+        template_folder="templates",
         static_folder="static"
     )
+    # データベースの初期化
     init_db(app)
 
-    # app.register_blueprint(team_bp, url_prefix="/api/teams")
-    # app.register_blueprint(theme1_bp, url_prefix="/api/theme1")
-    # app.register_blueprint(theme2_bp, url_prefix="/api/theme2")
-    # app.register_blueprint(draw_bp, url_prefix="/api/draw")
-    
+    # テンプレートの自動リロードを有効化
     app.config['TEMPLATES_AUTO_RELOAD'] = True
 
+    # アプリケーションコンテキスト内でDBテーブルを作成
     with app.app_context():
         db.create_all()
 
-    # ここから下はテンプレート用のルート
+    # Route
     @app.route("/")
     def index():
         return render_template("index.html")
@@ -105,4 +104,5 @@ def create_app():
     
     return app
 
+# アプリケーション起動
 app = create_app()

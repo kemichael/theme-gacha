@@ -10,6 +10,8 @@ def list_theme2():
     return jsonify([theme2_schema(t) for t in themes])
 
 @bp.route('', methods=['POST'])
+
+# add_theme2 DB登録
 def add_theme2():
     # 複数行対応
     names = request.json.get('names')
@@ -23,6 +25,8 @@ def add_theme2():
         return jsonify(theme2_schema(theme)), 201
 
 @bp.route('/<int:theme_id>', methods=['DELETE'])
+
+# remove_theme2 物理削除
 def remove_theme2(theme_id):
     if delete_theme2(theme_id):
         return jsonify({"result": "ok"})
